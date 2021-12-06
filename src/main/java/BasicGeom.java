@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Scanner;
 
 public class BasicGeom {
 
@@ -9,5 +10,22 @@ public class BasicGeom {
         var intermediate=xchange*xchange+ychange*ychange;
         distance=Math.sqrt(intermediate);
         return distance;
+    }
+
+    public static void main(String[] args){
+        Scanner inputReader=new Scanner(System.in);
+        System.out.println("what is the x location of first point");
+        var p1=new Point();
+        p1.x=inputReader.nextInt();
+        System.out.println("what is the y location of first point");
+        p1.y=inputReader.nextInt();
+        System.out.println("what is the x location of second point");
+
+        var p2=new Point();
+        p2.x=inputReader.nextInt();
+        System.out.println("what is the y location of second point");
+        p2.y=inputReader.nextInt();
+        System.out.println("p1 is: "+p1+"p2 is: "+p2);
+        System.out.println("the distance between your points is " +calcDistance(p1,p2));
     }
 }
